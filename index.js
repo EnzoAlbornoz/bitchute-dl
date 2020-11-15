@@ -163,6 +163,7 @@ async function getVideoStream(privateLink) {
 // Export Module Functions
 module.exports = {
 	isBitchuteLink,
+	fetchCookies,
 	searchVideo,
 	getVideoPrivateLink,
 	getVideoStream,
