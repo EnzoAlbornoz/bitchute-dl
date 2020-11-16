@@ -1,21 +1,21 @@
 # Bitchute Downloader
 
-This packages is focused on creating a wrapper over the BitChute site. Because the website doesn't have a API, the majority of the functions use HTML scrapping or XHR requests that are detected when videos are searched or selected.
+This packages is focused on creating a wrapper for the BitChute site. Because the website doesn't have a API, the majority of the functions use HTML scrapping or XHR requests that detect when videos are searched or selected.
 
 ## API
 
 ### `isBitchuteLink(possibleLink) : bool`
-Checks if a possible value is a valid URL and it's from bitchute domain
+Checks if a possible value is a valid URL and it's from the bitchute domain
 
 Paramameters:
 
 - `possibleLink: String`: Value containing a possible BitChute URL
 
 ### `fetchCookies() : Promise<CookieMap>`
-To correctly connecto to BitChute, it's needed to request to contains some cookies. So, this function will fetch these values. You can pass it to other functions to prevent they to fetch cookies internally.
+To correctly connect to BitChute, you have to request cookies. So, this function will fetch them. You may also pass it to other functions to prevent cookie fetching internally.
 
 ### `searchVideo (topic, duration, sorting,	cookies) : Promise<IVideoInfo[]>`
-List Bitchute videos based on search criteria. Currently, only the first page data is fetch.
+List Bitchute videos based on search criteria. Currently, only the first page of data is fetched.
 
 Parameters:
 
@@ -28,8 +28,8 @@ Parameters:
 	- `"feature"` - Videos longer than 45 minutes
 - `sorting: String` - Video sorting setting. Possible values are:
 	- `"relevance"` - Use higher relevance sorting (Default)
-	- `"newest"` - Sort newest videos first
-	- `"oldest"` - Sort oldest videos first
+	- `"newest"` - Sort by newest videos first
+	- `"oldest"` - Sort by oldest videos first
 - `cookies: CookieMap` - Cookies fetched from `fetchCookies`
 
 ### `getVideoPrivateLink(publicPath, cookies): Promise<String>`
