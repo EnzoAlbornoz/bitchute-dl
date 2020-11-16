@@ -3,4 +3,3 @@
 .eslintrc.json
 .prettierrc.json
 pnpm-lock.yaml
-index.d.ts

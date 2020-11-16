@@ -1,8 +1,10 @@
 {
 	"name": "bitchute-dl",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"description": "Get videos from BitChute easily",
 	"main": "index.js",
+	"type": "commonjs",
+	"types": "index.d.ts",
 	"author": "Enzo Coelho Albornoz <enzocoelhoalbornoz@gmail.com>",
 	"repository": {
 		"type": "git",
